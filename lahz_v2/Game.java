@@ -34,39 +34,39 @@ public class Game{
                
                rabbit.getX();
                snake.getX();
-               if(rabbit.x<snake.x){
+               if((rabbit.x-snake.x)<1){
                snake.move(-1,0);
                }
-               else if (rabbit.x>snake.x){
+               else if ((rabbit.x-snake.x)>-1){
                snake.move(1,0);
                }
                ++turns;
                break;
                   
 
-            case 2:        
+            case 2:        /// kanin ned
                rabbit.move(-1,0);
                
                rabbit.getX();
                snake.getX();
-               if(rabbit.x<snake.x){
+               if((rabbit.x-snake.x)<1){
                snake.move(-1,0);
                }
-               else if (rabbit.x>snake.x){
+               else if ((rabbit.x-snake.x)>-1){
                snake.move(1,0);
                }
                ++turns;               
                break;   
 
-            case 3:        
+            case 3:     /// kanin venstre   
                rabbit.move(0,-1);
                
                rabbit.getY();
                snake.getY();
-               if(rabbit.y<snake.y){
+               if((rabbit.y-snake.y)<1){
                snake.move(0,-1);
                }
-               else if (rabbit.y>snake.y){
+               else if ((rabbit.y-snake.y)>-1){
                snake.move(0,1);
                }               
                break;
@@ -77,10 +77,10 @@ public class Game{
                
                rabbit.getY();
                snake.getY();
-               if(rabbit.y<snake.y){
+               if((rabbit.y-snake.y)<1){
                snake.move(0,-1);
                }
-               else if (rabbit.y>snake.y){
+               else if ((rabbit.y-snake.y)>-1){
                snake.move(0,1);
                }
                ++turns;        
@@ -88,9 +88,14 @@ public class Game{
                
             case 5:
                rabbit1.printRabbitInfo();
+               System.out.println("7: Back to main menu");
                break;
             case 6:
                snake1.printSnakeInfo();
+               System.out.println("7: Back to main menu");
+               break;
+            case 7:
+               menuPrompt();
                break;
             case 0:
                System.out.println("You have given up\nThank you for playing.");
