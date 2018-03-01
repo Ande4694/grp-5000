@@ -93,6 +93,10 @@ public class Game{
                break;
             case 0:
                System.out.println("You have given up\nThank you for playing.");
+               break;
+               
+            default : 
+               System.out.println("Group 5000 those not recognize your input, try again..");
             
             
          }
