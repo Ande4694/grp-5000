@@ -15,6 +15,7 @@ public class Game{
       rabbit.name = "rabbit";
       snake.name = "snake";
       int turns = 0;
+      int fejl = 0;
       
       Scanner input = new Scanner(System.in);
       System.out.println("Welcome to group 5000's Little Animal Horror Zoo");
@@ -97,6 +98,11 @@ public class Game{
                
             default : 
                System.out.println("Group 5000 those not recognize your input, try again..");
+               ++fejl;
+               if(fejl > 1){
+               System.out.println("Are you doing this on purpose?!");
+               }
+               break;
             
             
          }
@@ -110,10 +116,10 @@ public class Game{
                   }
                
                if (dist < 2){
-                  System.out.println("\nAahhhhrrrr i'm eating you!\nThe Snake has caught the Rabbit!\nIt took: "+turns+" turns.\n Better luck next time.."); 
+                  System.out.println("\nSnake: \"Aahhhhrrrr i'm eating you!\"\nThe Snake has caught the Rabbit!\nIt took: "+turns+" turns.\nBetter luck next time.."); 
                   choice = 0;  
                   }else if(dist < 3){
-                  System.out.println("NOOOOO, Please don't eat me");
+                  System.out.println("Rabbit: \"NOOOOO, Please don't eat me\"");
                   } 
       }while(choice !=0); 
    }
