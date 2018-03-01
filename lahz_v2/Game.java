@@ -85,12 +85,15 @@ public class Game{
                ++turns;        
                break;
                
+            case 5:
+               rabbit1.printRabbitInfo();
+               break;
+            case 6:
+               snake1.printSnakeInfo();
+               break;
             case 0:
                System.out.println("You have given up\nThank you for playing.");
             
-            default: 
-               System.out.println("group 5000 does not recognize your input, please try again");
-               break;
             
          }
                // metode til at udregne afstanden mellem rabbit(x,y) og snake (x,y)
@@ -100,10 +103,10 @@ public class Game{
                if (turns==15){
                   System.out.println("Congratulations, you avoided the snake for 15 turns\nGroup 5000 salutes you");
                   choice = 0;   
-               }
+                  }
                
                if (dist < 2){
-                  System.out.println("\nThe Snake has caught the Rabbit!\nIt took: "+turns+" turns."); 
+                  System.out.println("\nAahhhhrrrr i'm eating you!\nThe Snake has caught the Rabbit!\nIt took: "+turns+" turns.\n Better luck next time.."); 
                   choice = 0;  
                   }else if(dist < 3){
                   System.out.println("NOOOOO, Please don't eat me");
@@ -116,6 +119,8 @@ public class Game{
                System.out.println("2: Move rabbit down");
                System.out.println("3: Move rabbit left");
                System.out.println("4: Move rabbit right");
+               System.out.println("5: Tell me about the rabbit");
+               System.out.println("6: Tell me about the snake");
                System.out.println("0: Give up");
   }
 }
