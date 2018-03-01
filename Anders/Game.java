@@ -16,7 +16,7 @@ import java.util.Scanner;
                else if (rabbit.x>snake.x){
                snake.move(1,0);
                }
-               
+               ++turns
                
                
                System.out.println("\n1: Move rabbit up");
@@ -26,11 +26,13 @@ import java.util.Scanner;
                System.out.println("0: Give up");
                
                if (distb < 2){
-                  System.out.println("\nThe Snake has caught the Rabbit!\nPress 0 to continue");
+                  System.out.println("\nThe Snake has caught the Rabbit! \n it took: "+turns+"turns\nPress 0 to continue");
                
                
                }else if(distb < 3){
                   System.out.println("NOOOOO, Please don't eat me");}
+                  
+               break;
                   
 
                case 2:        
@@ -50,7 +52,7 @@ import java.util.Scanner;
                else if (rabbit.x>snake.x){
                snake.move(1,0);
                }
-               
+               ++turns
                
                
                System.out.println("\n1: Move rabbit up");
@@ -60,11 +62,13 @@ import java.util.Scanner;
                System.out.println("0: Give up");
                
                if (distb < 2){
-                  System.out.println("\nThe Snake has caught the Rabbit!\nPress 0 to continue");
+                  System.out.println("\nThe Snake has caught the Rabbit! \n it took: "+turns+"turns\nPress 0 to continue");
                
                
                }else if(distb < 3){
                   System.out.println("NOOOOO, Please don't eat me");}
+                  
+               break;   
 
                case 3:        
                ///kanin venstre     
@@ -78,12 +82,12 @@ import java.util.Scanner;
                snake.getY();
                
                if(rabbit.y<snake.y){
-               snake.move(0,1);
-               }
-               else if (rabbit.y>snake.y){
                snake.move(0,-1);
                }
-               
+               else if (rabbit.y>snake.y){
+               snake.move(0,1);
+               }
+               ++turns
                
                
                System.out.println("\n1: Move rabbit up");
@@ -93,11 +97,13 @@ import java.util.Scanner;
                System.out.println("0: Give up");
                
                if (distb < 2){
-                  System.out.println("\nThe Snake has caught the Rabbit!\nPress 0 to continue");
+                  System.out.println("\nThe Snake has caught the Rabbit! \n it took: "+turns+"turns\nPress 0 to continue");
                
                
                }else if(distb < 3){
                   System.out.println("NOOOOO, Please don't eat me");}
+                  
+               break;
                   
                case 4:        
                ///kanin højre     
@@ -111,11 +117,12 @@ import java.util.Scanner;
                snake.getY();
                
                if(rabbit.y<snake.y){
-               snake.move(0,1);
-               }
-               else if (rabbit.y>snake.y){
                snake.move(0,-1);
                }
+               else if (rabbit.y>snake.y){
+               snake.move(0,1);
+               }
+               ++turns;
                
                
                
@@ -126,11 +133,13 @@ import java.util.Scanner;
                System.out.println("0: Give up");
                
                if (distb < 2){
-                  System.out.println("\nThe Snake has caught the Rabbit!\nPress 0 to continue");
+                  System.out.println("\nThe Snake has caught the Rabbit! \n it took: "+turns+"turns\nPress 0 to continue");
                
                
                }else if(distb < 3){
                   System.out.println("NOOOOO, Please don't eat me");}
+                  
+               break;
 
 
      */
@@ -151,7 +160,7 @@ public class Game{
       rabbit.sound = "nice";
       rabbit.name = "rabbit";
       snake.name = "snake";
-      
+      int turns = 0;
       
   }
 }
