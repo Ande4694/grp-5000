@@ -17,5 +17,21 @@ public class Point{
       this.x += dx;
       this.y += dy;   
       System.out.println("I am the "+sound+" "+name+", I am now standing on "+x+","+y);
-   }  
+   } 
+   
+   public int getX(){
+      return x;
+   } 
+   
+   public int getY(){
+      return y;
+   }
+   
+   public void setName(String name){
+      this.name=name;
+   }
+   
+   public void setSound(String sound){
+      this.sound=sound;
+   }
 }

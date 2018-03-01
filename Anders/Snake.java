@@ -36,4 +36,5 @@ public class Snake{
    System.out.println("Color:     " + color);
    System.out.println("Sex:       " + sex);
    System.out.println("Age:       " + age + "\n");
-}}
+}
+}
