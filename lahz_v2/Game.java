@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Game{   
    public static void main(String[]args){
    
+   
       // der laves en ny Rabbit og en ny Snake med følgende infomationer
       Rabbit rabbit1 = new Rabbit("Jacky", "American", "Blue", "Male", 2);
       Snake snake1 = new Snake("Jonny", "Anaconda", "Black", "Male", 4);  
@@ -16,17 +17,17 @@ public class Game{
       snake.name = "snake";
       int turns = 0;
       int fejl = 0;
-      
       Scanner input = new Scanner(System.in);
       System.out.println("Welcome to group 5000's Little Animal Horror Zoo");
       System.out.println("Your goal is to avoid the snake for 15 turns");
       System.out.println("To control the rabbit, choose one of the  following commands");
       menuPrompt();
-      
+
       int choice;
       do 
       {
          choice = input.nextInt();
+         
          switch(choice){
             
             case 1:        ///kanin op     
@@ -138,4 +139,5 @@ public class Game{
                System.out.println("6: Tell me about the snake");
                System.out.println("0: Give up");
   }
+  
 }
