@@ -4,17 +4,8 @@ public class Game{
    
    
       // der laves en ny Rabbit og en ny Snake med følgende infomationer
-      Rabbit rabbit1 = new Rabbit("Jacky", "American", "Blue", "Male", 2);
-      Snake snake1 = new Snake("Jonny", "Anaconda", "Black", "Male", 4);  
-   
-   // der laves et punkt der representere kaninen
-      Point rabbit = new Point(0,0);
-   // der laves et punkt der representere slangen
-      Point snake = new Point(10,10);
-      snake.sound = "evil";
-      rabbit.sound = "nice";
-      rabbit.name = "rabbit";
-      snake.name = "snake";
+      Point rabbit = new Point(0,0,"rabbit","nice","Jacky", "American", "Blue", "Male", 2);
+      Point snake = new Point(10,10,"snake","evil","Jonny", "Anaconda", "Black", "Male", 4);  
       int turns = 0;
       int fejl = 0;
       Scanner input = new Scanner(System.in);
@@ -95,11 +86,11 @@ public class Game{
                break;
                
             case 5:
-               rabbit1.printRabbitInfo();
+               rabbit.printAInfo();
                System.out.println("7: Back to main menu");
                break;
             case 6:
-               snake1.printSnakeInfo();
+               snake.printAInfo();
                System.out.println("7: Back to main menu");
                break;
             case 7:

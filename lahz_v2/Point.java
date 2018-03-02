@@ -4,11 +4,32 @@ public class Point{
    int y;
    String name;
    String sound;
+   String name2;
+   String species;
+   String color;
+   String sex;
+   int age;
+   
+   
+   public void printAInfo(){
+      System.out.println("Name:      " + name2);
+      System.out.println("Species:   " + species);
+      System.out.println("Color:     " + color);
+      System.out.println("Sex:       " + sex);
+      System.out.println("Age:       " + age + "\n");
+   }
    
    // constructor til at deffinere start punkt
-   public Point(int startx, int starty){
+   public Point(int startx, int starty, String name, String sound, String name2, String species, String color, String sex, int age){
       x = startx;
       y = starty;
+      this.name = name;
+      this.sound = sound;
+      this.name2= name2;
+      this.species = species;
+      this.color = color;
+      this.sex = sex;
+      this.age = age;    
    }   
    
    // metode til at ændre x og y, med given værdi.
