@@ -5,7 +5,7 @@ public class Point{
    String name;
    String sound;
    
-   // metode til at deffinere start punkt
+   // constructor til at deffinere start punkt
    public Point(int startx, int starty){
       x = startx;
       y = starty;

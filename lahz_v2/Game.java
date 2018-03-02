@@ -22,6 +22,13 @@ public class Game{
       System.out.println("Your goal is to avoid the snake for 15 turns");
       System.out.println("To control the rabbit, choose one of the  following commands");
       menuPrompt();
+      
+   // anti Jarl, således at Jarl ikke ødelægger vores code ....
+      while (!input.hasNextInt()) {
+      input.next();
+      System.out.println("Not an integer; try again.\nNice try Jarl..");
+      }
+     
 
       int choice;
       do 
@@ -129,7 +136,7 @@ public class Game{
                   } 
       }while(choice !=0); 
    }
-  private static void menuPrompt()
+  public static void menuPrompt()
   {
                System.out.println("\n1: Move rabbit up");
                System.out.println("2: Move rabbit down");
