@@ -7,6 +7,7 @@ public class Game{
       Point rabbit = new Point(0,0,"rabbit","nice","Jacky", "American", "Blue", "Male", 2);
       Point snake = new Point(10,10,"snake","evil","Jonny", "Anaconda", "Black", "Male", 4);  
       int turns = 0;
+      
       int fejl = 0;
       Scanner input = new Scanner(System.in);
       System.out.println("Welcome to group 5000's Little Animal Horror Zoo");
@@ -101,7 +102,7 @@ public class Game{
                break;
                
             default : 
-               System.out.println("Group 5000 those not recognize your input, try again..");
+               System.out.println("Group 5000 does not recognize your input, try again..");
                ++fejl;
                if(fejl > 1){
                System.out.println("Are you doing this on purpose?!");
